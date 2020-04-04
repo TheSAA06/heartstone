@@ -81,12 +81,19 @@
 		let enemyDamage = document.querySelector('.enemy_hp');
 		let playerHp = document.querySelector('.player_damage');
 		let enemyHp = document.querySelector('.enemy_damage');
+		let imgs = ['url(full-images/1.png)', 'url(full-images/2.png)', 'url(full-images/3.png)', 'url(full-images/4.png)', 'url(full-images/5.png)', 'url(full-images/6.png)', 'url(full-images/7.png)', 'url(full-images/8.png)','url(full-images/9.png)'];
 
 		let getRandom = function() {
 			let num = Math.random() * 10;
 			let roundNum = Math.round(num);
 			return roundNum;
 		}
+		let randomCards = function() {
+			let num = Math.random() * 9;
+			let roundNum = Math.round(num);
+			return roundNum;
+		}
+
 
 		let player1 = {
 			name : "Игрок",
@@ -98,7 +105,7 @@
 
 		let enemy1 = {
 			name : "Враг",
-			url : "url(images/2.png)",
+			url : imgs[randomCards()],
 			hp : getRandom(),
 			dmg : getRandom()	
 		}
